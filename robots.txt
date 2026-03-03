@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.vulcancloud.com/sitemap.xml
+
+# Google AI (controls Gemini training - does NOT affect regular search ranking)
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI - training data crawler
+User-agent: GPTBot
+Allow: /
+
+# OpenAI - real-time search (blocking this = won't appear in ChatGPT citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google other crawlers
+User-agent: GoogleOther
+Allow: /
