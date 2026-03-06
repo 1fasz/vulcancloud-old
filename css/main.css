@@ -128,6 +128,16 @@ nav::after {
   z-index: 600;
 }
 
+/* Transparent bridge fills the gap so mouse can reach the dropdown */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  right: -10px;
+  height: 14px;
+}
+
 .has-dropdown:hover .nav-dropdown,
 .has-dropdown:focus-within .nav-dropdown {
   display: block;
@@ -325,6 +335,19 @@ nav::after {
   z-index: 10;
   max-width: 820px;
   margin: 0 auto;
+}
+
+.page-banner-logo {
+  width: min(280px, 60vw);
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 4px 20px rgba(204,27,27,0.18)) drop-shadow(0 2px 6px rgba(0,0,0,0.07));
+  animation: bannerLogoBob 6s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes bannerLogoBob {
+  0%   { transform: translateY(0); filter: drop-shadow(0 4px 16px rgba(204,27,27,0.18)) drop-shadow(0 2px 6px rgba(0,0,0,0.07)); }
+  100% { transform: translateY(-7px); filter: drop-shadow(0 8px 28px rgba(204,27,27,0.28)) drop-shadow(0 4px 10px rgba(0,0,0,0.1)); }
 }
 
 .page-eyebrow {
