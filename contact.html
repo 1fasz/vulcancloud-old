@@ -133,7 +133,10 @@
 
       <!-- Right: Form -->
       <div>
-        <form class="contact-form" name="contact" method="POST" action="/thank-you.html" netlify>
+        <form class="contact-form" id="contactPageForm" action="https://formsubmit.co/ajax/info@vulcancloud.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — VulcanCloud.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name <span class="required">*</span></label>
@@ -182,8 +185,14 @@
             <label for="message">Tell Us About Your Environment</label>
             <textarea id="message" name="message" rows="5" placeholder="Describe your current setup, pain points, applications you're running, or any questions you have. The more detail, the better we can prepare for our call."></textarea>
           </div>
-          <button type="submit" class="btn-fire" style="width:100%; justify-content:center; font-size:1rem; padding:1rem 2rem;">Send Message</button>
+          <button type="submit" id="contactPageSubmit" class="btn-fire" style="width:100%; justify-content:center; font-size:1rem; padding:1rem 2rem;">Send Message</button>
           <p style="font-size:0.8rem; color:var(--muted); margin-top:0.8rem; text-align:center;">We'll respond within 1 business day. Your information is never sold or shared.</p>
+          <div id="contactPageSuccess" role="alert" style="display:none; margin-top:1rem; padding:1rem; background:#f0fdf4; border:1px solid #86efac; border-radius:8px; color:#166534; font-size:0.95rem;">
+            Message sent! We'll be in touch within one business day.
+          </div>
+          <div id="contactPageError" role="alert" style="display:none; margin-top:1rem; padding:1rem; background:#fef2f2; border:1px solid #fca5a5; border-radius:8px; color:#991b1b; font-size:0.95rem;">
+            Something went wrong. Please email us directly at <a href="mailto:info@vulcancloud.com" style="color:inherit;">info@vulcancloud.com</a>
+          </div>
         </form>
       </div>
 
@@ -238,6 +247,40 @@ function closeMenu() { menu.classList.remove('open'); overlay.classList.remove('
 ham.addEventListener('click', openMenu);
 close.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
+
+(function() {
+  var form = document.getElementById('contactPageForm');
+  if (!form) return;
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('contactPageSubmit');
+    var successEl = document.getElementById('contactPageSuccess');
+    var errorEl = document.getElementById('contactPageError');
+    successEl.style.display = 'none';
+    errorEl.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      var res = await fetch('https://formsubmit.co/ajax/info@vulcancloud.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      var data = await res.json();
+      if (data.success === 'true' || data.success === true) {
+        successEl.style.display = 'block';
+        form.reset();
+      } else {
+        throw new Error('failed');
+      }
+    } catch(err) {
+      errorEl.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
+  });
+})();
 </script>
 </body>
 </html>
