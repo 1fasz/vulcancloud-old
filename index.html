@@ -4045,7 +4045,7 @@ async function vcSend(text) {
     };
 
     res = await fetch(
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=' + vcApiKey,
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=' + vcApiKey,
       { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
     );
 
@@ -4068,8 +4068,8 @@ async function vcSend(text) {
     vcHideTyping();
     var errText = (e.message || String(e)).toLowerCase();
     var isKeyError = errText.indexOf('api key') !== -1 || errText.indexOf('api_key') !== -1 ||
-                     errText.indexOf('expired') !== -1 || errText.indexOf('invalid') !== -1 ||
-                     (res && (res.status === 400 || res.status === 401 || res.status === 403));
+                     errText.indexOf('key expired') !== -1 || errText.indexOf('key not valid') !== -1 ||
+                     (res && (res.status === 401 || res.status === 403));
     if (isKeyError) {
       localStorage.removeItem('vc_key2');
       vcApiKey = '';
