@@ -4001,8 +4001,8 @@ async function vcSend(text) {
 
   } catch(e) {
     vcHideTyping();
-    var msg = 'Sorry, something went wrong. Please try again.';
     console.error('Chat error:', e, 'Response status:', res ? res.status : 'no response');
+    var msg = 'Sorry, something went wrong (' + (e.message || 'unknown error') + '). Please try again.';
     vcAddMsg('bot', msg);
   }
 
