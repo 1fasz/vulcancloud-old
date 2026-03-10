@@ -4066,9 +4066,20 @@ async function vcSend(text) {
 
   } catch(e) {
     vcHideTyping();
-    var msg = 'Sorry, something went wrong: ' + (e.message || e);
-    if (res && res.status) msg += ' (HTTP ' + res.status + ')';
-    vcAddMsg('bot', msg);
+    var errText = (e.message || String(e)).toLowerCase();
+    var isKeyError = errText.indexOf('api key') !== -1 || errText.indexOf('api_key') !== -1 ||
+                     errText.indexOf('expired') !== -1 || errText.indexOf('invalid') !== -1 ||
+                     (res && (res.status === 400 || res.status === 401 || res.status === 403));
+    if (isKeyError) {
+      localStorage.removeItem('vc_key2');
+      vcApiKey = '';
+      document.getElementById('vcApiBox').style.display = 'block';
+      vcAddMsg('bot', 'Your API key is expired or invalid. Please enter a new one below.');
+    } else {
+      var msg = 'Sorry, something went wrong: ' + (e.message || e);
+      if (res && res.status) msg += ' (HTTP ' + res.status + ')';
+      vcAddMsg('bot', msg);
+    }
     console.error('Gemini error:', e, 'Response status:', res ? res.status : 'no response');
   }
 
