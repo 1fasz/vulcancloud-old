@@ -938,7 +938,9 @@ footer::before {
   height: 42px;
   width: auto;
   margin-bottom: 1rem;
-  filter: brightness(0) invert(1) opacity(0.8);
+  background: rgba(255,255,255,0.92);
+  border-radius: 4px;
+  padding: 4px 10px;
 }
 
 .footer-brand p {
