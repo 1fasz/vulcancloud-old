@@ -26,13 +26,6 @@
 [build.processing.images]
   compress = true
 
-# Canonical www redirect (no redirect chain — single 301)
-[[redirects]]
-  from   = "https://vulcancloud.com/*"
-  to     = "https://www.vulcancloud.com/:splat"
-  status = 301
-  force  = true
-
 # Pretty URLs: serve /desktop-as-a-service/ without trailing slash too
 [[redirects]]
   from   = "/desktop-as-a-service"
