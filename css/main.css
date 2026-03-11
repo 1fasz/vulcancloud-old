@@ -338,6 +338,9 @@ nav::after {
 }
 
 .page-banner-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: min(280px, 60vw);
   height: auto;
   margin-bottom: 2rem;
