@@ -1132,6 +1132,13 @@ footer::before {
   footer { padding: 3rem 1.5rem 2rem; }
 
   .breadcrumb { padding: 1rem 1.5rem; }
+
+  /* Index page: industry CTA buttons */
+  .index-industry-ctas { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .index-industry-ctas a { margin: 0 !important; width: 100%; max-width: 300px; text-align: center; }
+
+  /* Index page: What's Included 2-col grid → 1-col */
+  .index-whats-included-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
 }
 
 @media (max-width: 480px) {
