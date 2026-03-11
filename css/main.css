@@ -1139,6 +1139,9 @@ footer::before {
 
   /* Index page: What's Included 2-col grid → 1-col */
   .index-whats-included-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+
+  /* Global utility: collapse any 2-col grid to 1-col on mobile */
+  .mobile-stack { grid-template-columns: 1fr !important; gap: 2rem !important; }
 }
 
 @media (max-width: 480px) {
