@@ -938,9 +938,7 @@ footer::before {
   height: 42px;
   width: auto;
   margin-bottom: 1rem;
-  background: rgba(255,255,255,0.92);
-  border-radius: 4px;
-  padding: 4px 10px;
+  mix-blend-mode: screen;
 }
 
 .footer-brand p {
