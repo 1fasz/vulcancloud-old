@@ -7,3 +7,79 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Asset optimisation
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Canonical www redirect (no redirect chain — single 301)
+[[redirects]]
+  from   = "https://vulcancloud.com/*"
+  to     = "https://www.vulcancloud.com/:splat"
+  status = 301
+  force  = true
+
+# Pretty URLs: serve /desktop-as-a-service/ without trailing slash too
+[[redirects]]
+  from   = "/desktop-as-a-service"
+  to     = "/desktop-as-a-service/"
+  status = 301
+
+[[redirects]]
+  from   = "/managed-virtual-servers"
+  to     = "/managed-virtual-servers/"
+  status = 301
+
+[[redirects]]
+  from   = "/ai-secure-private-cloud"
+  to     = "/ai-secure-private-cloud/"
+  status = 301
+
+[[redirects]]
+  from   = "/backup-disaster-recovery"
+  to     = "/backup-disaster-recovery/"
+  status = 301
+
+[[redirects]]
+  from   = "/network-virtualization"
+  to     = "/network-virtualization/"
+  status = 301
+
+[[redirects]]
+  from   = "/managed-it-support"
+  to     = "/managed-it-support/"
+  status = 301
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
