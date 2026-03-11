@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videos: VulcanCloud Product Demos &amp; Customer Stories | VulcanCloud</title>
+<meta name="description" content="Watch VulcanCloud product demos, customer testimonials, and educational content about managed DaaS, private cloud, and HIPAA/compliance cloud computing for SMBs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.vulcancloud.com/video/">
+<meta property="og:title" content="Videos: VulcanCloud Product Demos &amp; Customer Stories">
+<meta property="og:description" content="Watch VulcanCloud product demos, customer testimonials, and educational content about managed DaaS, private cloud, and compliance cloud for SMBs.">
+<meta property="og:image" content="https://www.vulcancloud.com/images/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vulcancloud.com/video/">
+<meta property="og:site_name" content="VulcanCloud">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Videos: VulcanCloud Product Demos &amp; Customer Stories">
+<meta name="twitter:description" content="Watch VulcanCloud product demos, customer testimonials, and educational content about managed DaaS and private cloud for SMBs.">
+<meta name="twitter:image" content="https://www.vulcancloud.com/images/logo.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "VulcanCloud Video Content",
+  "description": "Product demos, customer testimonials, and educational videos from VulcanCloud.",
+  "url": "https://www.vulcancloud.com/video/",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "VulcanCloud Platform Demo: Managed DaaS Overview",
+      "url": "https://www.vulcancloud.com/video/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Customer Story: Law Firm Eliminates VPN",
+      "url": "https://www.vulcancloud.com/video/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How DaaS Solves HIPAA Compliance for Medical Practices",
+      "url": "https://www.vulcancloud.com/video/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vulcancloud.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Videos", "item": "https://www.vulcancloud.com/video/"}
+  ]
+}
+</script>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.video-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--ink-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.video-thumb-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+}
+.play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(204, 27, 27, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+.play-btn svg { width: 28px; height: 28px; fill: white; margin-left: 4px; }
+.video-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.4rem;
+}
+.video-title-overlay {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.video-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.video-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+.video-card-body p {
+  font-size: 0.88rem;
+  color: var(--ink-2);
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+.video-duration {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.script-section {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+.script-section h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.script-section p { font-size: 0.9rem; color: var(--ink-2); margin: 0 0 0.6rem; line-height: 1.6; }
+.script-section p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<nav role="banner">
+  <a href="../index.html" class="nav-logo" aria-label="VulcanCloud Home">
+    <img src="../images/logo.jpg" alt="VulcanCloud" class="nav-logo-img" width="160" height="44" loading="eager">
+  </a>
+  <ul class="nav-links">
+    <li class="has-dropdown">
+      <a href="../services.html">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="../services.html">All Services</a></li>
+        <li><a href="../services/managed-daas.html">Managed DaaS</a></li>
+        <li><a href="../services/cloud-servers.html">Cloud Servers</a></li>
+        <li><a href="../services/private-cloud.html">Private Cloud</a></li>
+        <li><a href="../services/monitoring-management.html">Monitoring &amp; Management</a></li>
+        <li><a href="../services/backup-disaster-recovery.html">Backup &amp; DR</a></li>
+        <li><a href="../services/network-virtualization.html">Network Virtualization</a></li>
+      </ul>
+    </li>
+    <li><a href="../pricing.html">Pricing</a></li>
+    <li class="has-dropdown">
+      <a href="../solutions/law-firms.html">Solutions</a>
+      <ul class="nav-dropdown">
+        <li><a href="../solutions/law-firms.html">Law Firms</a></li>
+        <li><a href="../solutions/healthcare.html">Healthcare</a></li>
+        <li><a href="../solutions/accounting-cpa.html">Accounting &amp; CPA</a></li>
+        <li><a href="../solutions/financial-services.html">Financial Services</a></li>
+      </ul>
+    </li>
+    <li><a href="../blog/index.html">Insights</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="../services.html">Services</a></li>
+      <li class="mobile-submenu"><a href="../services/managed-daas.html">↳ Managed DaaS</a></li>
+      <li><a href="../pricing.html">Pricing</a></li>
+      <li><a href="../solutions/law-firms.html">Solutions</a></li>
+      <li><a href="../blog/index.html">Insights</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html" class="mobile-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <img src="../images/logo.jpg" alt="VulcanCloud" class="page-banner-logo" loading="lazy">
+    <div class="page-eyebrow">Video Library</div>
+    <h1>Product Demos &amp; Customer Stories</h1>
+    <p>See VulcanCloud in action — product walkthroughs, customer testimonials, and short educational videos covering managed DaaS, private cloud, and compliance in regulated industries.</p>
+    <div class="btn-group">
+      <a href="../contact.html" class="btn-fire">Get a Live Demo</a>
+      <a href="../case-studies/index.html" class="btn-outline">Read Case Studies</a>
+    </div>
+  </div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  <span>Videos</span>
+</nav>
+
+<!-- Product Demo Videos -->
+<section style="padding: 5rem 0; background: var(--white);">
+  <div class="section" style="padding-top:0; padding-bottom:0;">
+    <p style="font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem;">Product Demos</p>
+    <h2 style="margin-top:0;">See How VulcanCloud Works</h2>
+    <div class="video-grid">
+
+      <!-- Demo 1: Platform Overview -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Product Demo · 4 min</div>
+            <div class="video-title-overlay">VulcanCloud Platform Overview</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>VulcanCloud Platform: 4-Minute Overview</h3>
+          <p>Watch how VulcanCloud delivers a full managed Windows desktop from the cloud — how users connect, what the experience looks like, and how IT manages everything from a single console.</p>
+          <span class="video-duration">Coming soon · Contact us for a live walkthrough</span>
+        </div>
+      </div>
+
+      <!-- Demo 2: Onboarding -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 50%, #3d1a1a 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Demo · 3 min</div>
+            <div class="video-title-overlay">New User Provisioning: 0 to Productive in Minutes</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>Provisioning a New User in Minutes</h3>
+          <p>See how IT adds a new employee to the VulcanCloud environment — selecting the user profile, assigning applications, and activating access. From zero to fully configured desktop in under 10 minutes.</p>
+          <span class="video-duration">Coming soon · Contact us for a live walkthrough</span>
+        </div>
+      </div>
+
+      <!-- Demo 3: Security Controls -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 50%, #0f2027 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Demo · 5 min</div>
+            <div class="video-title-overlay">Security Controls &amp; Audit Logging</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>Security Controls, MFA, and Audit Logging</h3>
+          <p>A walkthrough of VulcanCloud's security controls — MFA enforcement, session logging, access policy management, and how audit trails are exported for compliance documentation and regulatory examination.</p>
+          <span class="video-duration">Coming soon · Contact us for a live walkthrough</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Customer Testimonial Videos -->
+<section style="padding: 5rem 0; background: var(--off-white); border-top: 1px solid var(--border);">
+  <div class="section" style="padding-top:0; padding-bottom:0;">
+    <p style="font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem;">Customer Stories</p>
+    <h2 style="margin-top:0;">Hear from VulcanCloud Clients</h2>
+    <div class="video-grid">
+
+      <!-- Testimonial 1: Law Firm -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1c1c1c 0%, #2c1810 50%, #3d1f00 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Customer Story · Law Firm</div>
+            <div class="video-title-overlay">"Attorneys stopped calling about IT. The technology just works."</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>Law Firm Eliminates VPN, Passes Cyber Insurance Audit</h3>
+          <p>A 22-attorney litigation firm's managing partner explains how VulcanCloud replaced their failing VPN, passed their cyber insurance audit, and recovered hours of billable time that had been lost to IT friction.</p>
+          <span class="video-duration">Coming soon · <a href="../case-studies/law-firm-remote-work.html" style="color:var(--red);">Read the case study →</a></span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2: Healthcare -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #0a1628 0%, #0e2240 50%, #122d55 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Customer Story · Healthcare</div>
+            <div class="video-title-overlay">"Less per month than server lease payments — with better compliance."</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>Medical Practice: From $120K Server Refresh to Managed Cloud</h3>
+          <p>A multi-site medical practice's administrator describes avoiding a $120,000 capital expense, achieving HIPAA compliance with zero PHI on endpoints, and managing four locations from a single platform.</p>
+          <span class="video-duration">Coming soon · <a href="../case-studies/healthcare-hipaa-compliance.html" style="color:var(--red);">Read the case study →</a></span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3: Accounting -->
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a1f00 50%, #3d2e00 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Customer Story · Accounting</div>
+            <div class="video-title-overlay">"First tax season I wasn't lying awake worrying about our servers."</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>CPA Firm: Tax Season Without the Hardware Scramble</h3>
+          <p>The IT coordinator of a 35-person CPA firm explains how they now add 15 seasonal staff in 48 hours, cut IT spend by 28%, and went through their first crash-free tax season after moving to VulcanCloud.</p>
+          <span class="video-duration">Coming soon · <a href="../case-studies/accounting-firm-tax-season.html" style="color:var(--red);">Read the case study →</a></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Educational Content -->
+<section style="padding: 5rem 0; background: var(--white); border-top: 1px solid var(--border);">
+  <div class="section" style="padding-top:0; padding-bottom:0;">
+    <p style="font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem;">Educational</p>
+    <h2 style="margin-top:0;">Quick Explainer Videos</h2>
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Explainer · 2 min</div>
+            <div class="video-title-overlay">What Is DaaS? (The 2-Minute Version)</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>What Is Desktop-as-a-Service?</h3>
+          <p>A plain-language explanation of DaaS — what it is, how it differs from VPN and traditional remote desktop, and why businesses in regulated industries are moving to it.</p>
+          <span class="video-duration">Coming soon · <a href="../compare/daas-vs-saas.html" style="color:var(--red);">DaaS vs SaaS comparison →</a></span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Explainer · 3 min</div>
+            <div class="video-title-overlay">DaaS and HIPAA: What You Need to Know</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>DaaS and HIPAA Compliance</h3>
+          <p>How a managed DaaS environment addresses the HIPAA Security Rule — PHI isolation from endpoints, audit logging, BAA execution, and the difference between "HIPAA-capable" and "HIPAA-documented."</p>
+          <span class="video-duration">Coming soon · <a href="../solutions/healthcare.html" style="color:var(--red);">Healthcare solutions →</a></span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb" style="background: linear-gradient(135deg, #1c1c1c 0%, #2c1810 100%);">
+          <div class="video-thumb-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-label">Explainer · 3 min</div>
+            <div class="video-title-overlay">Private Cloud vs Public Cloud: Which Do You Need?</div>
+          </div>
+        </div>
+        <div class="video-card-body">
+          <h3>Private Cloud vs Public Cloud for SMBs</h3>
+          <p>Why AWS and Azure are often the wrong choice for regulated SMBs — and when managed private cloud makes more sense for compliance, predictable cost, and organizations without cloud engineers on staff.</p>
+          <span class="video-duration">Coming soon · <a href="../compare/private-cloud-vs-public-cloud.html" style="color:var(--red);">Full comparison →</a></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Video Script Notes: Internal use -->
+<!--
+PRODUCTION SCRIPTS — FOR VIDEO TEAM
+
+=== VIDEO 1: PLATFORM OVERVIEW (4 min) ===
+HOOK (0:00–0:20): "If you've ever had an attorney call you at 9pm because they can't access a deposition brief, or a CPA crash UltraTax during tax season because the office server went down — this is what the alternative looks like."
+PROBLEM (0:20–0:50): Show VPN slowness / dropped session scenario. "Traditional remote access relies on a VPN tunnel to an on-premises server. It's slow, it drops, and when it breaks, the data is still sitting in the office."
+SOLUTION (0:50–2:30): Screen capture of logging into a cloud desktop from a laptop. Show the full Windows environment loading. Open legal software, show file access. "This is a managed virtual desktop running in a US-based data center. Same application. Same files. From any device. Nothing is stored on the laptop."
+MANAGEMENT DEMO (2:30–3:30): Show admin console — user management, adding a new user, audit log export. "IT manages everything from one console. Add a user, they're active in minutes. Pull an audit log for a compliance audit, it's there."
+CTA (3:30–4:00): "See what this looks like for your specific setup. Talk to VulcanCloud."
+
+=== VIDEO 2: CUSTOMER TESTIMONIAL — LAW FIRM (3–4 min) ===
+SETTING: Law firm conference room or managing partner's office
+SUBJECT: Managing partner or office administrator
+TALKING POINTS:
+- "Before VulcanCloud, what did remote access look like for attorneys?"
+- "What was the cyber insurance situation?"
+- "What happened during the migration?"
+- "What's changed day-to-day since going live?"
+- "What would you tell another firm your size?"
+KEY QUOTES TO DRAW OUT:
+- "I haven't had to call IT about a server in [X months]."
+- "The examiner / insurance carrier asked for documentation and we had it."
+- "The technology just got out of the way."
+
+=== VIDEO 3: CUSTOMER TESTIMONIAL — CPA FIRM (3–4 min) ===
+SUBJECT: Managing partner or IT coordinator
+TALKING POINTS:
+- "What was tax season like before?"
+- "What did seasonal onboarding look like?"
+- "First tax season with VulcanCloud — what was different?"
+- "The IT cost picture — what changed?"
+KEY QUOTES TO DRAW OUT:
+- "We just add users in the portal."
+- "Last January was the first one where I wasn't panicking about servers."
+- "Support tickets went from every day to basically nothing."
+
+=== VIDEO 4: EXPLAINER — WHAT IS DaaS (2 min) ===
+VISUAL STYLE: Simple screen capture + voiceover, minimal graphics
+SCRIPT:
+"VPN gives you a tunnel into your office network. The problem is the tunnel breaks, it's slow, and your data is still sitting on servers in a closet somewhere.
+DaaS — Desktop-as-a-Service — takes a different approach. Instead of connecting you to a server, it runs your entire Windows desktop in a managed data center. You see the same desktop, open the same applications, access the same files — from any device, anywhere. And nothing is stored on your laptop.
+For regulated businesses — law firms, medical practices, CPA firms, financial advisors — this matters for two reasons.
+First, data isolation. With DaaS, client data never leaves the data center. No files on personal laptops. No PHI on home computers.
+Second, compliance. Because everything runs in a managed, monitored environment, you have audit logs, access controls, and security documentation that VPN setups simply can't provide.
+VulcanCloud manages the environment for you. Provisioning, patching, monitoring, backup — handled. You focus on your business. We handle the infrastructure."
+-->
+
+<div class="cta-block">
+  <h2>Want a Live Demo?</h2>
+  <p>We'll walk you through the VulcanCloud platform for your specific use case — law firm, medical practice, CPA firm, or financial services. No canned presentation, just your actual scenario.</p>
+  <a href="../contact.html" class="btn-fire">Schedule a Demo →</a>
+</div>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../images/logo.jpg" alt="VulcanCloud" width="160" height="44" loading="lazy">
+        <p>Managed Desktop-as-a-Service and cloud infrastructure for SMBs. US-based hosting, 99.99% uptime SLA.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">All Services</a></li>
+          <li><a href="../services/managed-daas.html">Managed DaaS</a></li>
+          <li><a href="../services/private-cloud.html">Private Cloud</a></li>
+          <li><a href="../services/backup-disaster-recovery.html">Backup &amp; DR</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="../solutions/law-firms.html">Law Firms</a></li>
+          <li><a href="../solutions/healthcare.html">Healthcare</a></li>
+          <li><a href="../solutions/accounting-cpa.html">Accounting &amp; CPA</a></li>
+          <li><a href="../solutions/financial-services.html">Financial Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../blog/index.html">Insights</a></li>
+          <li><a href="../case-studies/index.html">Case Studies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 VulcanCloud.com · All Rights Reserved · Partners: XTIUM · Citrix · Microsoft · C&amp;S LegalTech</span>
+      <span class="footer-copy"><a href="../privacy.html" style="color:inherit;">Privacy Policy</a> · <a href="../terms.html" style="color:inherit;">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+const ham = document.getElementById('navHamburger');
+const menu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('mobileMenuOverlay');
+const close = document.getElementById('mobileMenuClose');
+function openMenu() { menu.classList.add('open'); overlay.classList.add('open'); menu.setAttribute('aria-hidden','false'); ham.setAttribute('aria-expanded','true'); ham.classList.add('open'); }
+function closeMenu() { menu.classList.remove('open'); overlay.classList.remove('open'); menu.setAttribute('aria-hidden','true'); ham.setAttribute('aria-expanded','false'); ham.classList.remove('open'); }
+ham.addEventListener('click', openMenu);
+close.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+</script>
+</body>
+</html>
