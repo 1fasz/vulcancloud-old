@@ -8,23 +8,9 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Asset optimisation
+# Asset optimisation disabled (causes post-processing hang on static sites)
 [build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.images]
-  compress = true
+  skip_processing = true
 
 # Pretty URLs: serve /desktop-as-a-service/ without trailing slash too
 [[redirects]]
