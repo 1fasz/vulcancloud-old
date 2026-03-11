@@ -26,6 +26,97 @@
 [build.processing.images]
   compress = true
 
+# Case study redirects: .html → clean URL and bare slug → trailing slash
+[[redirects]]
+  from   = "/case-studies/accounting-firm-tax-season.html"
+  to     = "/case-studies/accounting-firm-tax-season/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/accounting-firm-tax-season"
+  to     = "/case-studies/accounting-firm-tax-season/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/christy-scott.html"
+  to     = "/case-studies/christy-scott/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/christy-scott"
+  to     = "/case-studies/christy-scott/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/dennis-oliver.html"
+  to     = "/case-studies/dennis-oliver/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/dennis-oliver"
+  to     = "/case-studies/dennis-oliver/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/financial-services-compliance.html"
+  to     = "/case-studies/financial-services-compliance/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/financial-services-compliance"
+  to     = "/case-studies/financial-services-compliance/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/healthcare-hipaa-compliance.html"
+  to     = "/case-studies/healthcare-hipaa-compliance/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/healthcare-hipaa-compliance"
+  to     = "/case-studies/healthcare-hipaa-compliance/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/law-firm-remote-work.html"
+  to     = "/case-studies/law-firm-remote-work/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/law-firm-remote-work"
+  to     = "/case-studies/law-firm-remote-work/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/leah-scalise.html"
+  to     = "/case-studies/leah-scalise/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/leah-scalise"
+  to     = "/case-studies/leah-scalise/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/multi-location-expansion.html"
+  to     = "/case-studies/multi-location-expansion/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/multi-location-expansion"
+  to     = "/case-studies/multi-location-expansion/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/nancy-hughes.html"
+  to     = "/case-studies/nancy-hughes/"
+  status = 301
+
+[[redirects]]
+  from   = "/case-studies/nancy-hughes"
+  to     = "/case-studies/nancy-hughes/"
+  status = 301
+
 # Pretty URLs: serve /desktop-as-a-service/ without trailing slash too
 [[redirects]]
   from   = "/desktop-as-a-service"
