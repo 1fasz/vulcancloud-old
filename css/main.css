@@ -39,7 +39,7 @@ body {
 }
 
 /* ─── NAVIGATION ─── */
-nav {
+nav[role="banner"] {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 500;
@@ -54,7 +54,7 @@ nav {
   box-shadow: 0 1px 20px rgba(0,0,0,0.06);
 }
 
-nav::after {
+nav[role="banner"]::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -1124,7 +1124,7 @@ footer::before {
 }
 
 @media (max-width: 768px) {
-  nav { padding: 0 1.5rem; }
+  nav[role="banner"] { padding: 0 1.5rem; }
   .nav-hamburger { display: flex; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
