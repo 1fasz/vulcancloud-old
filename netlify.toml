@@ -13,11 +13,11 @@
   skip_processing = false
 
 [build.processing.css]
-  bundle = true
+  bundle = false
   minify = true
 
 [build.processing.js]
-  bundle = true
+  bundle = false
   minify = true
 
 [build.processing.html]
